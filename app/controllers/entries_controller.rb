@@ -1,10 +1,20 @@
 class EntriesController < ApplicationController
+  before_action :authenticate_officer!, only: [:index, :new, :edit, :update, :destroy]
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
 
   # GET /entries
   # GET /entries.json
   def index
     @entries = Entry.all
+  end
+
+  # GET /entries
+  # GET /entries.json
+  def getEntries
+    @entries = Entry.all
+    respond_to do |format|
+     format.json {render json: @entries}
+   end
   end
 
   # GET /entries/1

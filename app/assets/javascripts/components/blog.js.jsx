@@ -7,11 +7,14 @@ var Blog = React.createClass({
   },
   loadBlog: function(){
     $.ajax({
-     url: "/entries.json",
+     url: "/getEntries.json",
      type: 'get',
      dataType: 'json',
      success: function(data){
-       this.setState({entries:data});
+       var sortedEntries = data.sort(function(a, b){
+         return b.id-a.id;
+       });
+       this.setState({entries:sortedEntries});
      }.bind(this),
      error: function(xhr, err, status){
        console.error(err.toString());
