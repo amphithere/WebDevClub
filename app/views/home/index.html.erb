@@ -5,11 +5,13 @@
   <body>
       <div class ="row header">
         <div class="container">
-          <h1>UA Web Dev Club</h1>
-          <p>
-            Learn about how the web works all the way to creating your own web app!
-            Club is open to anyone and all experience levels!
-          </p>
+          <div class="welcome">
+            <h1>&#60;UA Web Dev Club&#47;&#62;</h1>
+            <p>
+              Learn about how the web works all the way to creating your own web app!
+              Club is open to anyone and all experience levels!
+            </p>
+        </div>
         </div>
       </div>
 
@@ -29,11 +31,14 @@
                   <li>How the Web Works</li>
                   <li>HTML/CSS</li>
                   <li>Web Frameworks: Ruby on Rails (MVC Architectural Pattern)</li>
+                  <li>Bootstrap</li>
                   <li>Servers</li>
                   <li>JavaScript</li>
+                  <li>jQuery</li>
                   <li>ReactJS</li>
                   <li>Databases: MySQL</li>
                   <li>Git</li>
+                  <li>Heroku</li>
               </ul>
 
             </p>
@@ -56,14 +61,15 @@
             </p>
           </div>
         </section>
+        <section id="news">
+          <div class="container">
+            <h2>News/Announcements</h2>
+            <%= react_component('Blog', {name: 'John'}) %>
+          </div>
+        </section>
         <section id="contact">
           <div class="container">
             <h2>Contact</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae enim vitae urna tristique interdum. Mauris bibendum suscipit magna quis sollicitudin.
-              Proin at lorem a odio feugiat consectetur. Nulla laoreet tempus quam, nec gravida sem fringilla a. Mauris vestibulum sapien sapien, eget ullamcorper lacus tempus a.
-              Aliquam at risus mauris. Aliquam erat volutpat.
-            </p>
           </div>
         </section>
     </div>

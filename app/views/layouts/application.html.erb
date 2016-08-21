@@ -20,8 +20,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <div role="navigation" class="navbar navbar-default navbar-static-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
               <div class="row">
                 <div class="navbar-header">
@@ -33,12 +33,27 @@
                 </div>
                 <div id="main-navbar" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
-                    <li class="false"><a href="#">About</a></li>
-                    <li class="false"><a href="#">When/Where</a></li>
-                    <li class="false"><a href="#">Events/Schedule</a></li>
-                    <li class="false"><a href="blog">News/Announcements</a></li>
-                    <li class="false"><a href="#">Contact</a></li>
+                    <% if current_page?(root_path) %>
+                      <li class="active"><a id ="home" class="page-scroll" href="#page-top">Home</a></li>
+                    <% else %>
+                      <li class="active"><%= link_to('Home', root_path)%></li>
+                    <%end%>
+                    <li class="false"><a class="page-scroll" href="#about">About</a></li>
+                    <li class="false"><a class="page-scroll" href="#when">When/Where</a></li>
+                    <li class="false"><a class="page-scroll" href="#events">Events/Schedule</a></li>
+                    <li class="false"><a a class="page-scroll" href="#news" >News/Announcements</a></li>
+                    <li class="false"><a class="page-scroll" href="#contact">Contact</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <% if officer_signed_in? %>
+                      <li>
+                      <%= link_to('Logout', destroy_officer_session_path, :method => :delete) %>
+                      </li>
+                    <% else %>
+                      <li>
+                      <%= link_to('Officer Login', new_officer_session_path)  %>
+                      </li>
+                    <% end %>
                   </ul>
                 </div>
               </div>

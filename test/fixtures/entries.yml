@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  officer: MyString
+  title: MyString
+  body: MyText
+
+two:
+  officer: MyString
+  title: MyString
+  body: MyText

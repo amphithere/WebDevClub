@@ -5,7 +5,9 @@
 .header {
   color: black;
   background-image: image-url("school.png");
-  padding: 100px 0;
+  height: 100%;
+  width: 100%;
+  padding-top: 200px;
   h1, p{
     text-align: center;
   }
@@ -14,16 +16,23 @@
   }
 }
 
+.welcome {
+  height: 100px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
 section {
+  font-size: 20px;
   padding: 100px 0;
   h2 {
     text-align: center;
   }
 }
 
-#about {
-
-}
 
 #when {
   h2 {
