@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UA Web Development Club</title>
+  <!-- Normalize CSS -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+
+  <!-- Latest icon font stylesheet-->
+  <link rel="stylesheet" href="//brand.arizona.edu/sites/all/themes/brand/ua-brand-icons/ua-brand-icons.css">
+
+  <!-- Latest compiled and minified CSS icon font not included-->
+  <link rel="stylesheet" href="//bitbucket.org/uadigital/ua-bootstrap/downloads/ua-bootstrap-1.0.0-beta1.min.css">
+
+  <!-- jQuery -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div role="navigation" class="navbar navbar-default navbar-static-top">
+            <div class="container">
+              <div class="row">
+                <div class="navbar-header">
+                  <button type="button" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span>
+                    <!-- span.icon-bar-->
+                    <!-- span.icon-bar-->
+                    <!-- span.icon-bar--><span class="text">MAIN MENU</span>
+                  </button>
+                </div>
+                <div id="main-navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li class="false"><a href="#">About</a></li>
+                    <li class="false"><a href="#">When/Where</a></li>
+                    <li class="false"><a href="#">Events/Schedule</a></li>
+                    <li class="false"><a href="blog">News/Announcements</a></li>
+                    <li class="false"><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header {
+  color: black;
+  background-image: image-url("school.png");
+  padding: 100px 0;
+  h1, p{
+    text-align: center;
+  }
+  p {
+    font-size: 22px;
+  }
+}
+
+section {
+  padding: 100px 0;
+  h2 {
+    text-align: center;
+  }
+}
+
+#about {
+
+}
+
+#when {
+  h2 {
+      color: white;
+  }
+  background-color: #5C8727;
+  color: white;
+}
+
+#events {
+  background-color: #F7F8F4;
+}
+
+#contact {
+  h2 {
+      color: white;
+  }
+  background-color:  #076873;
+  color: white;
+}
